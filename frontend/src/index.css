@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f3f4f6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* ── Dark Mode Global Overrides ─────────────────────────────── */
+.dark body { background-color: #0f172a; }
+
+/* Cards & panels */
+.dark .bg-white     { background-color: #1e293b !important; }
+.dark .bg-gray-50   { background-color: #1e293b !important; }
+.dark .bg-gray-100  { background-color: #0f172a !important; }
+.dark .bg-gray-200  { background-color: #334155 !important; }
+
+/* Text */
+.dark .text-gray-900 { color: #f1f5f9 !important; }
+.dark .text-gray-800 { color: #e2e8f0 !important; }
+.dark .text-gray-700 { color: #cbd5e1 !important; }
+.dark .text-gray-600 { color: #94a3b8 !important; }
+.dark .text-gray-500 { color: #64748b !important; }
+.dark .text-gray-400 { color: #475569 !important; }
+.dark .text-gray-300 { color: #334155 !important; }
+
+/* Borders */
+.dark .border-gray-100 { border-color: #334155 !important; }
+.dark .border-gray-200 { border-color: #475569 !important; }
+
+/* Inputs & textareas */
+.dark input:not([type="file"]),
+.dark textarea,
+.dark select {
+  background-color: #334155 !important;
+  color: #f1f5f9 !important;
+  border-color: #475569 !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #64748b !important; }
+
+/* Shadow softening in dark */
+.dark .shadow-sm  { box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important; }
+.dark .shadow-md  { box-shadow: 0 4px 8px rgba(0,0,0,0.5) !important; }
+.dark .shadow-xl  { box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important; }
+.dark .shadow-2xl { box-shadow: 0 20px 50px rgba(0,0,0,0.7) !important; }
+
+/* Hover states */
+.dark .hover\:bg-gray-50:hover  { background-color: #1e293b !important; }
+.dark .hover\:bg-gray-100:hover { background-color: #334155 !important; }
+
+/* Selected/active nav */
+.dark .bg-gray-900 { background-color: #334155 !important; }
+.dark .hover\:bg-gray-800:hover { background-color: #475569 !important; }
+
+/* Tinted info/status boxes — blend into the dark surface */
+.dark .bg-amber-50,
+.dark .bg-yellow-50,
+.dark .bg-green-50,
+.dark .bg-blue-50,
+.dark .bg-red-50,
+.dark .bg-orange-50,
+.dark .bg-cyan-50   { background-color: #0f172a !important; }
+
+.dark .bg-blue-100,
+.dark .bg-green-100,
+.dark .bg-yellow-100,
+.dark .bg-red-100,
+.dark .bg-amber-100 { background-color: #334155 !important; }
+
+/* Tinted box borders */
+.dark .border-amber-100,
+.dark .border-green-100,
+.dark .border-blue-100,
+.dark .border-red-100,
+.dark .border-orange-100 { border-color: #334155 !important; }
+
+/* Keep colored text readable on dark tinted boxes */
+.dark .text-green-700 { color: #4ade80 !important; }
+.dark .text-blue-700  { color: #60a5fa !important; }
+.dark .text-blue-600  { color: #60a5fa !important; }
+.dark .text-yellow-700 { color: #fbbf24 !important; }
+.dark .text-red-600   { color: #f87171 !important; }
+.dark .text-orange-600 { color: #fb923c !important; }
+.dark .text-amber-700 { color: #fbbf24 !important; }

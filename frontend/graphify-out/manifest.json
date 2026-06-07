@@ -1,0 +1,292 @@
+{
+  "F:\\OCT-Platform\\ai-service\\app.py": {
+    "mtime": 1773509979.8023484,
+    "ast_hash": "76b14c86176808f00ce57ace514d2c7d",
+    "semantic_hash": "76b14c86176808f00ce57ace514d2c7d"
+  },
+  "F:\\OCT-Platform\\backend\\main.py": {
+    "mtime": 1773372889.322703,
+    "ast_hash": "ea2f0941b49dbd6a2b899bd30d707385",
+    "semantic_hash": "ea2f0941b49dbd6a2b899bd30d707385"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\mvnw": {
+    "mtime": 1773458674.7216847,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\BackendApplication.java": {
+    "mtime": 1778893976.6708372,
+    "ast_hash": "faf6eb742ab52937fba918062f683fc1",
+    "semantic_hash": "faf6eb742ab52937fba918062f683fc1"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\config\\SecurityConfig.java": {
+    "mtime": 1773459290.340776,
+    "ast_hash": "97c455310b082af13139a26567391f25",
+    "semantic_hash": "97c455310b082af13139a26567391f25"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\AdminController.java": {
+    "mtime": 1778932355.111012,
+    "ast_hash": "c0deaadbf99f04a22c949f4ea98fff46",
+    "semantic_hash": "c0deaadbf99f04a22c949f4ea98fff46"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\AuthController.java": {
+    "mtime": 1778931251.6896813,
+    "ast_hash": "8951d45b3d221fd9e09b536d475df3dc",
+    "semantic_hash": "8951d45b3d221fd9e09b536d475df3dc"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\ComplaintController.java": {
+    "mtime": 1778894684.4598522,
+    "ast_hash": "448c94621e42b9e43f8cb69ad6aefdf2",
+    "semantic_hash": "448c94621e42b9e43f8cb69ad6aefdf2"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\MessageController.java": {
+    "mtime": 1773511498.1731935,
+    "ast_hash": "7ecde24504355513930953e3ac67661c",
+    "semantic_hash": "7ecde24504355513930953e3ac67661c"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\ReportController.java": {
+    "mtime": 1773472019.3992705,
+    "ast_hash": "7da35d9fde0d110a63599a7cad13b0a3",
+    "semantic_hash": "7da35d9fde0d110a63599a7cad13b0a3"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\controller\\UserController.java": {
+    "mtime": 1778893870.7577124,
+    "ast_hash": "c20cc4879a2d4a3b8c984f8c5295f080",
+    "semantic_hash": "c20cc4879a2d4a3b8c984f8c5295f080"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\dto\\LoginRequest.java": {
+    "mtime": 1773459247.4516706,
+    "ast_hash": "0f1d32bb1c673ab9449b96bcddb84ce7",
+    "semantic_hash": "0f1d32bb1c673ab9449b96bcddb84ce7"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\dto\\RegisterRequest.java": {
+    "mtime": 1778895379.086521,
+    "ast_hash": "5906546330e60c590d50fc329c5996cc",
+    "semantic_hash": "5906546330e60c590d50fc329c5996cc"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\entity\\Complaint.java": {
+    "mtime": 1778894653.6558638,
+    "ast_hash": "0b82a50fcacf57157cdb3669d33d3311",
+    "semantic_hash": "0b82a50fcacf57157cdb3669d33d3311"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\entity\\Message.java": {
+    "mtime": 1773459218.9138641,
+    "ast_hash": "ab8a64b949858c81bc34bee337bcf996",
+    "semantic_hash": "ab8a64b949858c81bc34bee337bcf996"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\entity\\Report.java": {
+    "mtime": 1773470530.3554745,
+    "ast_hash": "b40f6854495bf41f44448c63eebeb1c9",
+    "semantic_hash": "b40f6854495bf41f44448c63eebeb1c9"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\entity\\User.java": {
+    "mtime": 1778931238.368226,
+    "ast_hash": "ab55020d23697739313c8a5a6dff2992",
+    "semantic_hash": "ab55020d23697739313c8a5a6dff2992"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\repository\\ComplaintRepository.java": {
+    "mtime": 1778894661.1116118,
+    "ast_hash": "623a33fd2d60d47f25ed7d35c3d95607",
+    "semantic_hash": "623a33fd2d60d47f25ed7d35c3d95607"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\repository\\MessageRepository.java": {
+    "mtime": 1773511504.1778038,
+    "ast_hash": "0d77cebddc2dfa10f30b5e760d8e92f3",
+    "semantic_hash": "0d77cebddc2dfa10f30b5e760d8e92f3"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\repository\\ReportRepository.java": {
+    "mtime": 1778894673.9867752,
+    "ast_hash": "d695e1877e91ed6261e49d071d2fddc0",
+    "semantic_hash": "d695e1877e91ed6261e49d071d2fddc0"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\main\\java\\com\\oct\\backend\\repository\\UserRepository.java": {
+    "mtime": 1778893945.213504,
+    "ast_hash": "7bdfd97e185050fdbec1788c90c2dab2",
+    "semantic_hash": "7bdfd97e185050fdbec1788c90c2dab2"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\src\\test\\java\\com\\oct\\backend\\BackendApplicationTests.java": {
+    "mtime": 1773458674.7562497,
+    "ast_hash": "697138c5cf7eff779e87377c474778ce",
+    "semantic_hash": "697138c5cf7eff779e87377c474778ce"
+  },
+  "F:\\OCT-Platform\\frontend\\eslint.config.js": {
+    "mtime": 1773295943.3777404,
+    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
+    "semantic_hash": "49c8473bcfcec3aef596a5fb04a6df06"
+  },
+  "F:\\OCT-Platform\\frontend\\package.json": {
+    "mtime": 1773296305.386049,
+    "ast_hash": "aab210f2d7349ab6bc86757b30754e87",
+    "semantic_hash": "aab210f2d7349ab6bc86757b30754e87"
+  },
+  "F:\\OCT-Platform\\frontend\\postcss.config.js": {
+    "mtime": 1773296214.8020272,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
+  },
+  "F:\\OCT-Platform\\frontend\\tailwind.config.js": {
+    "mtime": 1773296339.6623628,
+    "ast_hash": "8e5f3e4bb648ed10dcaa8f0098a7e849",
+    "semantic_hash": "8e5f3e4bb648ed10dcaa8f0098a7e849"
+  },
+  "F:\\OCT-Platform\\frontend\\vite.config.js": {
+    "mtime": 1773295943.3911054,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
+  },
+  "F:\\OCT-Platform\\frontend\\.claude\\settings.local.json": {
+    "mtime": 1779452307.491016,
+    "ast_hash": "c68b1ca42024a676825e141d6b33f7d8",
+    "semantic_hash": "c68b1ca42024a676825e141d6b33f7d8"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\api.js": {
+    "mtime": 1778932344.1979573,
+    "ast_hash": "9be6c26d530c15cabd92e1fd8e80d104",
+    "semantic_hash": "9be6c26d530c15cabd92e1fd8e80d104"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\App.jsx": {
+    "mtime": 1778894086.8487804,
+    "ast_hash": "4715e713607d36b479857dab52d43fb7",
+    "semantic_hash": "4715e713607d36b479857dab52d43fb7"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\main.jsx": {
+    "mtime": 1773295943.4205894,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\components\\AdminLayout.jsx": {
+    "mtime": 1778894839.4929147,
+    "ast_hash": "480fae1b34fb052df937322330acc848",
+    "semantic_hash": "480fae1b34fb052df937322330acc848"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\components\\DoctorLayout.jsx": {
+    "mtime": 1773474850.5390215,
+    "ast_hash": "96e2dc84aa2cf4cb90f973e0edde55c8",
+    "semantic_hash": "96e2dc84aa2cf4cb90f973e0edde55c8"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\components\\PatientLayout.jsx": {
+    "mtime": 1773474395.9705672,
+    "ast_hash": "ce9e8ba787925c2c8b342c5725938465",
+    "semantic_hash": "ce9e8ba787925c2c8b342c5725938465"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\components\\SendToDoctorModal.jsx": {
+    "mtime": 1773471930.2177434,
+    "ast_hash": "09bbb01d26248fe97e4a7d3a157c8d06",
+    "semantic_hash": "09bbb01d26248fe97e4a7d3a157c8d06"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\context\\ReportsContext.jsx": {
+    "mtime": 1773472068.0801113,
+    "ast_hash": "e07423c3ab08065b02959b75d2ec76ca",
+    "semantic_hash": "e07423c3ab08065b02959b75d2ec76ca"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1778930229.8041883,
+    "ast_hash": "87ac487929e7c9f1f11a6f7fd937448d",
+    "semantic_hash": "87ac487929e7c9f1f11a6f7fd937448d"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\admin\\AdminComplaints.jsx": {
+    "mtime": 1778931424.2823045,
+    "ast_hash": "56893a501a31986323f4baa2c7833949",
+    "semantic_hash": "56893a501a31986323f4baa2c7833949"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\admin\\AdminDashboard.jsx": {
+    "mtime": 1778894962.1977086,
+    "ast_hash": "2155c3129b6b447c128e656bf1991c1e",
+    "semantic_hash": "2155c3129b6b447c128e656bf1991c1e"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\admin\\AdminReports.jsx": {
+    "mtime": 1778894797.0547838,
+    "ast_hash": "3ed563dacfcc578ef03b22e2a2810a68",
+    "semantic_hash": "3ed563dacfcc578ef03b22e2a2810a68"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\admin\\AdminUsers.jsx": {
+    "mtime": 1778932333.7446752,
+    "ast_hash": "2f5a6b3b94354c2bb860a62b33b672ce",
+    "semantic_hash": "2f5a6b3b94354c2bb860a62b33b672ce"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\doctor\\DoctorEnhancement.jsx": {
+    "mtime": 1773509988.9763875,
+    "ast_hash": "8b41df5cc6c726b091fd682f0e8e9bd1",
+    "semantic_hash": "8b41df5cc6c726b091fd682f0e8e9bd1"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\doctor\\DoctorMessages.jsx": {
+    "mtime": 1773511038.0050325,
+    "ast_hash": "162ddff8af3b1cb08843de5e2e014656",
+    "semantic_hash": "162ddff8af3b1cb08843de5e2e014656"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\doctor\\DoctorPendingReports.jsx": {
+    "mtime": 1778894941.871845,
+    "ast_hash": "bfbdf0cf04cf8587a6e3f47c6231e26e",
+    "semantic_hash": "bfbdf0cf04cf8587a6e3f47c6231e26e"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\AIDiagnosis.jsx": {
+    "mtime": 1773510010.4344478,
+    "ast_hash": "2902e1c7c04609c647ff661cc9b6c51d",
+    "semantic_hash": "2902e1c7c04609c647ff661cc9b6c51d"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\FluidQuantification.jsx": {
+    "mtime": 1773509988.9685528,
+    "ast_hash": "0059a1f6acea7b58d33113765fc891ec",
+    "semantic_hash": "0059a1f6acea7b58d33113765fc891ec"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\ImageEnhancement.jsx": {
+    "mtime": 1773509988.94948,
+    "ast_hash": "d7306b3687faca908987dd0010427980",
+    "semantic_hash": "d7306b3687faca908987dd0010427980"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\Messages.jsx": {
+    "mtime": 1773511780.6164653,
+    "ast_hash": "d06b4c1aeebe464937cde44f6f98eb86",
+    "semantic_hash": "d06b4c1aeebe464937cde44f6f98eb86"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\MyReports.jsx": {
+    "mtime": 1773511733.0617688,
+    "ast_hash": "3844954b2095294886ecd65f8c1ae741",
+    "semantic_hash": "3844954b2095294886ecd65f8c1ae741"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\pages\\patient\\Overview.jsx": {
+    "mtime": 1773296514.317216,
+    "ast_hash": "24cbfb5162a964651601006f95f14693",
+    "semantic_hash": "24cbfb5162a964651601006f95f14693"
+  },
+  "F:\\OCT-Platform\\START-HERE.md": {
+    "mtime": 1778931515.3111477,
+    "ast_hash": "9f89a5ca831c526b0d675da4fbf05161",
+    "semantic_hash": "9f89a5ca831c526b0d675da4fbf05161"
+  },
+  "F:\\OCT-Platform\\.run\\pids.txt": {
+    "mtime": 1778932396.4258738,
+    "ast_hash": "74473969361b686b25a3a9b3c7205520",
+    "semantic_hash": "74473969361b686b25a3a9b3c7205520"
+  },
+  "F:\\OCT-Platform\\backend\\requirements.txt": {
+    "mtime": 1773372896.4068727,
+    "ast_hash": "fd8162f6c55feb476d6254f97bd9cd03",
+    "semantic_hash": "fd8162f6c55feb476d6254f97bd9cd03"
+  },
+  "F:\\OCT-Platform\\backend\\backend\\HELP.md": {
+    "mtime": 1773458674.7007973,
+    "ast_hash": "f4ca6a338985f0631d41ea15727752c3",
+    "semantic_hash": "f4ca6a338985f0631d41ea15727752c3"
+  },
+  "F:\\OCT-Platform\\frontend\\index.html": {
+    "mtime": 1773295971.8262072,
+    "ast_hash": "54d590750a9bfdc5cfed42071da293bc",
+    "semantic_hash": "54d590750a9bfdc5cfed42071da293bc"
+  },
+  "F:\\OCT-Platform\\frontend\\README.md": {
+    "mtime": 1773295943.4205894,
+    "ast_hash": "3f01850e9fce601d04d6dba39204c1d8",
+    "semantic_hash": "3f01850e9fce601d04d6dba39204c1d8"
+  },
+  "F:\\OCT-Platform\\frontend\\public\\vite.svg": {
+    "mtime": 1773295943.4536288,
+    "ast_hash": "8e3a10e157f75ada21ab742c022d5430",
+    "semantic_hash": "8e3a10e157f75ada21ab742c022d5430"
+  },
+  "F:\\OCT-Platform\\frontend\\src\\assets\\react.svg": {
+    "mtime": 1773295943.443447,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  }
+}

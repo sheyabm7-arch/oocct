@@ -1,0 +1,33 @@
+{
+  "folders": [
+    { "name": "frontend (React/Vite)", "path": "frontend" },
+    { "name": "backend (Spring Boot)", "path": "backend/backend" },
+    { "name": "ai-service (FastAPI)", "path": "ai-service" },
+    { "name": "ROOT", "path": "." }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "F:\\OCT-Platform\\ai-service\\venv\\Scripts\\python.exe",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Microsoft\\jdk-21.0.11.10-hotspot",
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-21",
+        "path": "C:\\Program Files\\Microsoft\\jdk-21.0.11.10-hotspot",
+        "default": true
+      }
+    ],
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/venv": true,
+      "**/target": true,
+      "**/__pycache__": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "vmware.vscode-spring-boot",
+      "ms-python.python",
+      "dbaeumer.vscode-eslint"
+    ]
+  }
+}

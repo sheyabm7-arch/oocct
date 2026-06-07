@@ -1,0 +1,6 @@
+fastapi==0.95.2
+uvicorn
+sqlalchemy
+psycopg2-binary
+bcrypt
+pydantic==1.10.21
