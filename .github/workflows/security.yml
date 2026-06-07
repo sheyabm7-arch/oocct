@@ -25,9 +25,9 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          # --only-verified reduces false positives; --fail breaks the build
-          # if any verified secret is found.
-          extra_args: --only-verified --fail
+          # The action already fails the build on findings; only add filtering here.
+          # (Do NOT pass --fail — the action adds it internally and it can't repeat.)
+          extra_args: --only-verified
 
   # ----------------------------------------------------------
   # Static Application Security Testing (SAST) with CodeQL,
