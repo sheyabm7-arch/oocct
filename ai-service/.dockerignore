@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Local virtual environment (deps are reinstalled in the image)
+venv/
+
+# Git metadata and docs
+.git/
+.gitignore
+*.md
+
+# Notebooks / local artifacts
+*.ipynb
+.ipynb_checkpoints/
+
+# NOTE: the .h5 model files are NOT ignored — app.py loads them
+#       (Trained_Model.h5 and model_eye_diseases7_denoised.h5).

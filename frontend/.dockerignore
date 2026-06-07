@@ -1,0 +1,15 @@
+# Installed dependencies (reinstalled inside the image)
+node_modules/
+
+# Build output (regenerated inside the image)
+dist/
+
+# Git metadata and docs
+.git/
+.gitignore
+*.md
+
+# Local tooling / OS noise
+.vscode/
+.DS_Store
+graphify-out/

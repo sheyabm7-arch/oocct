@@ -1,0 +1,12 @@
+# Build output (rebuilt inside the image)
+target/
+
+# Git metadata and docs — not needed in the image
+.git/
+.gitignore
+*.md
+
+# IDE / OS noise
+.idea/
+.vscode/
+.DS_Store

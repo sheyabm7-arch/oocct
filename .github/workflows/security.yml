@@ -1,0 +1,72 @@
+# ============================================================
+#  Security — secret scanning + static code analysis
+#  Runs on every push to main.
+# ============================================================
+name: Security
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # ----------------------------------------------------------
+  # Scan the repository for accidentally committed secrets
+  # (API keys, passwords, tokens) using TruffleHog.
+  # ----------------------------------------------------------
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so TruffleHog can scan all commits
+
+      - name: Run TruffleHog secret scan
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          # --only-verified reduces false positives; --fail breaks the build
+          # if any verified secret is found.
+          extra_args: --only-verified --fail
+
+  # ----------------------------------------------------------
+  # Static Application Security Testing (SAST) with CodeQL,
+  # analyzing both the Java backend and the JavaScript frontend.
+  # ----------------------------------------------------------
+  code-analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write   # required to upload CodeQL results
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [java-kotlin, javascript-typescript]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Java needs a JDK so CodeQL can build and analyze the backend
+      - name: Set up Java 21
+        if: matrix.language == 'java-kotlin'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      # 1. Initialize CodeQL for the current language
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+
+      # 2. Let CodeQL automatically build the code (compiles the Maven project)
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      # 3. Run the analysis and report any security vulnerabilities
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"

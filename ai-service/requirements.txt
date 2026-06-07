@@ -1,0 +1,9 @@
+# Web framework + ASGI server
+fastapi
+uvicorn[standard]
+python-multipart        # required by FastAPI for file uploads (UploadFile)
+
+# Deep learning + image processing
+tensorflow==2.13.0
+numpy==1.24.3           # pinned: TF 2.13 is incompatible with numpy 2.x
+pillow

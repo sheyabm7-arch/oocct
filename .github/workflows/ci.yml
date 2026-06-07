@@ -1,0 +1,99 @@
+# ============================================================
+#  CI — run the test suites for all three services
+#  Runs on every push and pull request targeting main.
+# ============================================================
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ----------------------------------------------------------
+  # Backend tests (JUnit + Mockito)
+  # ----------------------------------------------------------
+  test-backend:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Get the source code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Install Java 21 (Temurin) with Maven dependency caching
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      # 3. Make the Maven wrapper executable (it loses the +x bit on checkout)
+      - name: Make mvnw executable
+        run: chmod +x mvnw
+        working-directory: backend/backend
+
+      # 4. Run the unit tests
+      - name: Run backend tests
+        run: ./mvnw test
+        working-directory: backend/backend
+
+  # ----------------------------------------------------------
+  # AI Engine tests (pytest)
+  # ----------------------------------------------------------
+  test-ai:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      # Install the service dependencies plus the testing tools.
+      # httpx is pinned < 0.28 because Starlette's TestClient needs the old "app=" API.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest "httpx<0.28"
+        working-directory: ai-service
+
+      - name: Run AI tests
+        run: python -m pytest tests/ -v
+        working-directory: ai-service
+
+  # ----------------------------------------------------------
+  # Frontend checks (build + tests if any exist)
+  # ----------------------------------------------------------
+  test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: frontend
+
+      # Runs the "test" script only if one is defined (the project has none yet,
+      # so this is skipped gracefully instead of failing the pipeline).
+      - name: Run frontend tests (if present)
+        run: npm test --if-present -- --run
+        working-directory: frontend
+
+      # A production build is a meaningful check that the frontend compiles.
+      - name: Build frontend
+        run: npm run build
+        working-directory: frontend

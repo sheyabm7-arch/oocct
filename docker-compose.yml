@@ -1,0 +1,94 @@
+# ============================================================
+#  OCT Analysis Platform — full stack
+#  Services: PostgreSQL · Backend (Spring Boot) · AI Engine
+#            (FastAPI) · Frontend (React/nginx)
+#  Run with:  docker compose up --build
+# ============================================================
+
+services:
+  # ----------------------------------------------------------
+  # PostgreSQL 16 database
+  # ----------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: oct-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      # Named volume → data survives container restarts/rebuilds
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      # Backend waits until this passes before starting
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - oct-network
+
+  # ----------------------------------------------------------
+  # Backend — Spring Boot (Java 21) on port 9000
+  # ----------------------------------------------------------
+  backend:
+    build: ./backend/backend          # Dockerfile + pom.xml live here
+    container_name: oct-backend
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    depends_on:
+      postgres:
+        condition: service_healthy    # wait until the DB is ready
+    environment:
+      # Spring auto-binds SPRING_DATASOURCE_* to spring.datasource.*
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      # Custom secrets (read in application.properties via ${...})
+      JWT_SECRET: ${JWT_SECRET}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    networks:
+      - oct-network
+
+  # ----------------------------------------------------------
+  # AI Engine — FastAPI (Python 3.11) on port 8001
+  # ----------------------------------------------------------
+  ai-service:
+    build: ./ai-service
+    container_name: oct-ai-service
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    networks:
+      - oct-network
+
+  # ----------------------------------------------------------
+  # Frontend — React build served by nginx on port 80
+  # ----------------------------------------------------------
+  frontend:
+    build: ./frontend
+    container_name: oct-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - ai-service
+    networks:
+      - oct-network
+
+# ----------------------------------------------------------
+# Shared network → services reach each other by name
+# (e.g. the backend connects to "postgres", nginx proxies to "backend")
+# ----------------------------------------------------------
+networks:
+  oct-network:
+    driver: bridge
+
+# Persistent database storage
+volumes:
+  postgres_data:
