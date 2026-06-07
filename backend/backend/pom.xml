@@ -70,6 +70,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- In-memory database for the test context (no PostgreSQL needed in CI) -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- Email -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
