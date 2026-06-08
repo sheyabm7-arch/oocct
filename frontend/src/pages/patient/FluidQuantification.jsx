@@ -49,7 +49,7 @@ export default function FluidQuantification({ user }) {
     try {
       const formData = new FormData()
       formData.append('file', image)
-      const res = await fetch('http://localhost:8001/measure-fluid', {
+      const res = await fetch('/ai/measure-fluid', {
         method: 'POST',
         body: formData,
       })

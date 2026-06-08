@@ -4,7 +4,7 @@ import { getMessages, getDoctorReports, getPatients, getToken, fileComplaint } f
 import { useWebSocket } from '../../hooks/useWebSocket'
 import { useLang } from '../../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ Authorization: `Bearer ${getToken()}` })
 
 const typeIcons = {

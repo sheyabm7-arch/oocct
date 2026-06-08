@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Eye as EyeIcon, EyeOff, Lock, CheckCircle, Loader2 } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 
 const strength = (pwd, t) => {
   if (pwd.length < 6) return { level: 0, label: t('tooShort'), color: 'bg-red-400' }

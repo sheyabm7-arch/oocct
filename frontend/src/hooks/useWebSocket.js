@@ -25,7 +25,7 @@ export function useWebSocket(userId, onMessage) {
     if (!userId) return
 
     const client = new Client({
-      webSocketFactory: () => new SockJS('http://localhost:9000/ws'),
+      webSocketFactory: () => new SockJS('/ws'),
       connectHeaders: { Authorization: `Bearer ${getToken() ?? ''}` },
       reconnectDelay: 5000,
       onConnect: () => {

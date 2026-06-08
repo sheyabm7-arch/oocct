@@ -27,7 +27,7 @@ export default function DoctorEnhancement() {
     try {
       const formData = new FormData()
       formData.append('file', image)
-      const res = await fetch('http://localhost:8001/enhance', { method: 'POST', body: formData })
+      const res = await fetch('/ai/enhance', { method: 'POST', body: formData })
       if (!res.ok) throw new Error()
       const blob = await res.blob()
       setEnhanced(URL.createObjectURL(blob))

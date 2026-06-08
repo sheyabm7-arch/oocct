@@ -4,7 +4,7 @@ import { useReports } from '../context/ReportsContext'
 import { getDoctors, getToken } from '../api'
 import StarRating from './StarRating'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ Authorization: `Bearer ${getToken()}` })
 
 export default function SendToDoctorModal({ onClose, reportType, summary, diagnosis, confidence, imageData }) {

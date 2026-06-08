@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:9000'
+const BASE = ''
 
 // ─── Token helpers ────────────────────────────────────────
 export const getToken = () => localStorage.getItem('token')

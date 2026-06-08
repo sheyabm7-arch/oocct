@@ -3,7 +3,7 @@ import { Camera, Edit2, Save, X, User, Phone, Calendar, Users, FileText, Stethos
 import { getToken, getPatientImages, deletePatientImage } from '../../api'
 import { useLang } from '../../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` })
 
 export default function PatientProfile({ user, onUserUpdate }) {

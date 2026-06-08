@@ -6,7 +6,7 @@ import { getToken } from '../../api'
 import { openInMaps, mapEmbedSrc } from '../../data/countries'
 import { useLang } from '../../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` })
 
 const PROFICIENCY_COLORS = {

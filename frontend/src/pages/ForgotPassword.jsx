@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Eye, ArrowLeft, Mail, Loader2 } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 
 export default function ForgotPassword({ onBack, onSuccess }) {
   const [email, setEmail]     = useState('')

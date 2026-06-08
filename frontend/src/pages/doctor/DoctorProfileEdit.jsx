@@ -6,7 +6,7 @@ import { countries, openInMaps, mapEmbedSrc } from '../../data/countries'
 import LocationPickerModal from '../../components/LocationPickerModal'
 import { useLang } from '../../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` })
 
 const PROFICIENCY = ['Beginner', 'Intermediate', 'Expert']

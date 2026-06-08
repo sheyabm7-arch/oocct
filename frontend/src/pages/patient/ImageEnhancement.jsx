@@ -47,7 +47,7 @@ export default function ImageEnhancement({ user }) {
     try {
       const formData = new FormData()
       formData.append('file', image)
-      const res = await fetch('http://localhost:8001/enhance', {
+      const res = await fetch('/ai/enhance', {
         method: 'POST',
         body: formData,
       })

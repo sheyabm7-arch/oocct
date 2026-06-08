@@ -4,7 +4,7 @@ import { Search, Star, Building2, Clock } from 'lucide-react'
 import { getDoctors, getToken } from '../../api'
 import { useLang } from '../../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const authHdr = () => ({ Authorization: `Bearer ${getToken()}` })
 
 export default function DoctorsList() {

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Eye, ArrowLeft, Loader2, RefreshCw } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 
-const BASE = 'http://localhost:9000'
+const BASE = ''
 const TOTAL = 60 // 60 seconds
 
 export default function VerifyOTP({ email, onSuccess, onResend }) {

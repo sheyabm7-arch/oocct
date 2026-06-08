@@ -30,7 +30,7 @@ export default function FloatingChatbot({ user }) {
     setLoading(true)
 
     try {
-      const res = await fetch('http://localhost:9000/api/chatbot/message', {
+      const res = await fetch('/api/chatbot/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

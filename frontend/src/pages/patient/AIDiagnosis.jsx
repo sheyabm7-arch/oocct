@@ -66,7 +66,7 @@ export default function AIDiagnosis({ user }) {
     try {
       const formData = new FormData()
       formData.append('file', image)
-      const res = await fetch('http://localhost:8001/classify', {
+      const res = await fetch('/ai/classify', {
         method: 'POST',
         body: formData,
       })

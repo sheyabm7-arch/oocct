@@ -1,14 +1,9 @@
 # ============================================================
 #  OCT Analysis Platform — full stack
-#  Services: PostgreSQL · Backend (Spring Boot) · AI Engine
-#            (FastAPI) · Frontend (React/nginx)
-#  Run with:  docker compose up --build
 # ============================================================
 
 services:
-  # ----------------------------------------------------------
   # PostgreSQL 16 database
-  # ----------------------------------------------------------
   postgres:
     image: postgres:16-alpine
     container_name: oct-postgres
@@ -18,10 +13,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      # Named volume → data survives container restarts/rebuilds
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      # Backend waits until this passes before starting
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
@@ -29,24 +22,20 @@ services:
     networks:
       - oct-network
 
-  # ----------------------------------------------------------
-  # Backend — Spring Boot (Java 21) on port 9000
-  # ----------------------------------------------------------
+  # Backend — Spring Boot
   backend:
-    build: ./backend/backend          # Dockerfile + pom.xml live here
+    image: abomazen0/oct-backend:latest
     container_name: oct-backend
     restart: unless-stopped
     ports:
       - "9000:9000"
     depends_on:
       postgres:
-        condition: service_healthy    # wait until the DB is ready
+        condition: service_healthy
     environment:
-      # Spring auto-binds SPRING_DATASOURCE_* to spring.datasource.*
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
-      # Custom secrets (read in application.properties via ${...})
       JWT_SECRET: ${JWT_SECRET}
       MAIL_USERNAME: ${MAIL_USERNAME}
       MAIL_PASSWORD: ${MAIL_PASSWORD}
@@ -54,11 +43,9 @@ services:
     networks:
       - oct-network
 
-  # ----------------------------------------------------------
-  # AI Engine — FastAPI (Python 3.11) on port 8001
-  # ----------------------------------------------------------
+  # AI Engine — FastAPI
   ai-service:
-    build: ./ai-service
+    image: abomazen0/oct-ai:latest
     container_name: oct-ai-service
     restart: unless-stopped
     ports:
@@ -66,11 +53,9 @@ services:
     networks:
       - oct-network
 
-  # ----------------------------------------------------------
-  # Frontend — React build served by nginx on port 80
-  # ----------------------------------------------------------
+  # Frontend — React/nginx
   frontend:
-    build: ./frontend
+    image: abomazen0/oct-frontend:latest
     container_name: oct-frontend
     restart: unless-stopped
     ports:
@@ -81,14 +66,9 @@ services:
     networks:
       - oct-network
 
-# ----------------------------------------------------------
-# Shared network → services reach each other by name
-# (e.g. the backend connects to "postgres", nginx proxies to "backend")
-# ----------------------------------------------------------
 networks:
   oct-network:
     driver: bridge
 
-# Persistent database storage
 volumes:
   postgres_data:
