@@ -28,3 +28,4 @@ describe('StarRating component', () => {
     stars.forEach((star) => expect(star).toBeDisabled())
   })
 })
+//232
