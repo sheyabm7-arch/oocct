@@ -24,6 +24,7 @@ services:
 
   # Backend — Spring Boot
   backend:
+    build: ./backend/backend
     image: abomazen0/oct-backend:latest
     container_name: oct-backend
     restart: unless-stopped
@@ -45,6 +46,7 @@ services:
 
   # AI Engine — FastAPI
   ai-service:
+    build: ./ai-service
     image: abomazen0/oct-ai:latest
     container_name: oct-ai-service
     restart: unless-stopped
@@ -55,6 +57,7 @@ services:
 
   # Frontend — React/nginx
   frontend:
+    build: ./frontend
     image: abomazen0/oct-frontend:latest
     container_name: oct-frontend
     restart: unless-stopped

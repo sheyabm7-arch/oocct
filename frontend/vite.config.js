@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -6,6 +7,12 @@ export default defineConfig({
   plugins: [react()],
   define: {
     global: 'globalThis',
+  },
+  // Vitest configuration (unit/component tests)
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
   },
   // Dev-only proxy so the relative URLs (/api, /ws, /ai) work locally.
   // In production these are handled by nginx instead.
